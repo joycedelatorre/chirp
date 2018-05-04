@@ -1,0 +1,19 @@
+{
+  "name": "chirp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joycedelatorre/chirp.git"
+  },
+  "author": "Eric Scott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joycedelatorre/chirp/issues"
+  },
+  "homepage": "https://github.com/joycedelatorre/chirp#readme"
+}
