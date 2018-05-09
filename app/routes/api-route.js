@@ -13,5 +13,17 @@ module.exports = function(app){
 		})
 	});
 
-	//
-}
+	//Add a chirp 
+	app.post ("api/new", function(req, res){
+		console.log("Chirp data: ");
+		console.log(req.body);
+
+		var dbQuery = "INSERT INTO CHIRPS (author, body, created_at) VALUES (?,?,?)";
+		connection.query(dbquery, [req.body.author, req.body.body, req.body.created_at], function(err,result){
+			req.body.body, req
+			console.log("chirp successfully saved!");
+			res.send();
+		});
+	});
+};
+
