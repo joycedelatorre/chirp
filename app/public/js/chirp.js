@@ -1,18 +1,18 @@
 //When the page loads, grab and display all of our chirps.
 // alert("hello"); --> to test that html is linked correctly to javascript
 
-// $.get("api/all", function(data){
-// 	if(data.length !== 0){
-// 		for(var i =0; i<data.length; i++){
-// 			var row = $("<div>");
-// 			row.addClass("chirp");
-// 			row.append("<p>" + data[i].author +"chirped. .</p>");
-// 			row.append("<p>" + data[i].body + "<p>");
-// 			row.append("<p> At" moment(data[i].created_at).format("h:m"));
-// 			$("#chirp-area").prepend(row);
-// 		}
-// 	}
-// });
+$.get("/api/all", function(data){
+	if(data.length !== 0){
+		for(var i =0; i<data.length; i++){
+			var row = $("#chirpies");
+			row.addClass("chirp");
+			row.append("<p>" + data[i].author +"chirped: </p>");
+			row.append("<p>" + data[i].body + "<p>");
+			row.append("<p> At " + moment(data[i].created_at).format("h:m") +"</p> <hr>");
+			$("#chirp-area").prepend(row);
+		}
+	}
+});
 
 //When a user chirps (clicks addbtn)
 $("#chirp-submit").on("click", function(event){

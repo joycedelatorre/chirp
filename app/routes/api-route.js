@@ -7,7 +7,7 @@ var connection = require("../config/connection.js");
 module.exports = function(app){
 	//Get all chirps 
 	app.get("/api/all", function(req, res){
-		var dbQuery = "SELECT * FROM chirps";
+		var dbQuery = "SELECT * FROM message";
 		connection.query(dbQuery, function(err, result){
 			res.json(result);
 		})
@@ -18,7 +18,7 @@ module.exports = function(app){
 		console.log("Chirp data: ");
 		console.log(req.body);
 
-		var dbQuery = "INSERT INTO CHIRPS (author, body, created_at) VALUES (?,?,?)";
+		var dbQuery = "INSERT INTO message (author, body, created_at) VALUES (?,?,?)";
 		connection.query(dbQuery, [req.body.author, req.body.body, req.body.created_at], function(err,result){
 			req.body.body, req
 			console.log("chirp successfully saved!");
