@@ -38,7 +38,8 @@ $("#chirp-submit").on("click", function(event){
 			row.addClass("chirp");
 			row.append ("<p>" + newChirp.author + " chirped: </p>");
 			row.append("<p>" + newChirp.body + "</p>");
-			row.append("<p> At " + moment(newChirp.created_at).format("h:mm:ss"));
+			row.append("<p> At " + moment(newChirp.created_at).format("h:mm:ss")+"</p> <hr>"
+				);
 			$("#chirp-area").prepend(row);
 		});
 });
