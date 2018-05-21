@@ -6,7 +6,7 @@ $.get("/api/all", function(data){
 		for(var i =0; i<data.length; i++){
 			var row = $("#chirpies");
 			row.addClass("chirp");
-			row.append("<p>" + data[i].author +"chirped: </p>");
+			row.append("<p>" + data[i].author +" chirped: </p>");
 			row.append("<p>" + data[i].body + "<p>");
 			row.append("<p> At " + moment(data[i].created_at).format("h:m") +"</p> <hr>");
 			$("#chirp-area").prepend(row);
