@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/joycedelatorre/chirp/issues"
   },
-  "homepage": "https://github.com/joycedelatorre/chirp#readme"
+  "homepage": "https://github.com/joycedelatorre/chirp#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
 }
