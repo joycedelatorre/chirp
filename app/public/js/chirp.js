@@ -26,21 +26,23 @@ $("#chirp-submit").on("click", function(event){
 	};
 
 	console.log(newChirp);
+
+	//Empty each input box by replacing the value with an empty string
+	$("#author").val("");
+	$("#chirp-box").val("");
+
+	//Send an ajax POST-request with JQuery
+	$.post("/api/new",newChirp)
+		.done(function(){
+			var row = $("#chirpies");
+			row.addClass("chirp");
+			row.append ("<p>" + newChirp.author + " chirped: </p>");
+			row.append("<p>" + newChirp.body + "</p>");
+			row.append("<p> At " + moment(newChirp.created_at).format("h:mm:ss"));
+			$("#chirp-area").prepend(row);
+		});
 });
 
 
 
-// //Send an ajax POST-request with JQuery
-// $.post("/api/new",newChirp)
-// 	.done(function(){
-// 		var row = $("div");
-// 		row.addClass("chirp");
-// 		row.append ("<p>" + newChirp.author + "chirped: </p>");
-// 		row.append("<p>" + newChirp.body + "</p>");
-// 		row.append("<p> At " + moment(newChirp.created_at).format("h:mm:ss"));
-// 		$("#chirp-area").prepend(row);
-// 	});
-// //Empty each input box by replacing the value with an empty string
 
-// $("author").val("");
-// $("chirp-box").val("");
