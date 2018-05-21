@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Chirp</title>
-	<script>type = "text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.js"</script>
-	<link href ="https://fonts.googleapis.com/css?family=Shrikhand" rel ="stylesheet">
-	<!-- BOOTSTRAP -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<!-- STYLESHEET -->
-	<link rel="stylesheet" href="./css/sytlesheet.css">
-<body>
-	<div class="container">
-		<div class="jumbotron">
-		  <h1 class="display-3">Chirpy!</h1>
-		</div>
+	<head>
+		<title>Chirp</title>
+		<script type = "text/javascript" src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.js"></script>
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<link href ="https://fonts.googleapis.com/css?family=Shrikhand" rel ="stylesheet">
+		<!-- BOOTSTRAP -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- STYLESHEET -->
+		<link rel="stylesheet" href="./css/sytlesheet.css">
+	</head>
 
-		<div>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+			  <h1 class="display-3">Chirpy!</h1>
+			</div>
 
-			<form>
-			    <label for="exampleFormControlTextarea1">Name</label>
-				<div class="form-group row">
-			    	<div class="col-md-3"></div>
-			    	<textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="1" placeholder="Enter your name"></textarea>
-			    	<div class="col-md-3"></div>
+			<div>
+				<form>
+				    <label for="exampleFormControlTextarea1">Name</label>
+					<div class="form-group row">
+				    	<div class="col-md-3"></div>
+				    	<textarea class="form-control col-md-6" id="author" rows="1" placeholder="Enter your name"></textarea>
+				    	<div class="col-md-3"></div>
 
-				</div>
-			</form>
+					</div>
+				</form>
 
 
-			<form>
-			    <label for="exampleFormControlTextarea1">Chirp</label>
-				<div class="form-group row">
-			    	<div class="col-md-3"></div>
-			    	<textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="3" placeholder="Chirp here!"></textarea>
-			    	<div class="col-md-3"></div>
+				<form>
+				    <label for="exampleFormControlTextarea1">Chirp</label>
+					<div class="form-group row">
+				    	<div class="col-md-3"></div>
+				    	<textarea class="form-control col-md-6" id="chirp-box" rows="3" placeholder="Chirp here!"></textarea>
+				    	<div class="col-md-3"></div>
 
-				</div>
-				<br>
-				<br>
-				<button type="button" class="btn btn-light">Submit</button>
-			</form>
-		</div>
-		<br>
-		<label>Chirpies</label>
-		<hr>
-		<div class="chirpies">
-			
-		</div>
+					</div>
+					<br>
+					<br>
+					<button type="button" class="btn btn-light" id ="chirp-submit">Submit</button>
+				</form>
+			</div>
+			<br>
+			<label>Chirpies</label>
+			<hr>
+			<div class="chirpies">
+				
+			</div>
+		</div> <!-- end of .container -->
 
-	</div> <!-- end of .container -->
-
-	<script>type="text/javascript" src ="js/chirp.js"</script>
-</body>
+		<script type="text/javascript" src ="./js/chirp.js"></script>
+	</body>
 </html>
