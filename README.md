@@ -1,3 +1,4 @@
 # chirp
 
-Using sql queries instead of sequelize
+Using sql queries to retrieve and post data instead of sequelize
+
